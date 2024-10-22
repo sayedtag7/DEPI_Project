@@ -1,17 +1,32 @@
-# Data Engineering
+# Data Flow Pipeline in Azure Synapse Analytics
 
-## Technologies Used:
+This project demonstrates a Data Flow pipeline in **Azure Synapse Analytics**, where data is sourced from three different files (JSON, Excel, CSV), combined using a **Union transformation**, and stored in a final destination as a CSV file.
 
-- **Microsoft Azure Data Lake** for storing unstructured data from all factory systems.
-- **Azure Synapse Analytics (Data Warehouse)** to organize and analyze structured data from different sources.
-- **Azure Data Factory** to automate ETL processes, transferring data from the Data Lake to the Data Warehouse.
-- **Microsoft SQL Server** for managing structured data related to product quality and equipment performance.
+## Project Overview
 
-## Innovation and Uniqueness:
+The goal of this project is to load data from three different source formats, combine them into a single dataset, and store the results in a CSV file for further analysis or machine learning tasks.
 
-- **Integrated Analysis**: Using a Data Lake to capture all raw data and a Data Warehouse to present a comprehensive view of production quality.
+## Steps in the Data Flow Pipeline:
 
-## Expected Outcomes:
+### 1. Source Files:
+- **JSON File**: The first data source is a JSON file containing structured data.
+- **Excel File**: The second source is an Excel file with tabular data.
+- **CSV File**: The third source is a CSV file with additional data.
 
-- **Enhanced Operational Efficiency**: Improving manufacturing processes and minimizing production downtime, leading to higher competitiveness for the plant.
-- **Increased Equipment Efficiency**: Continuous monitoring of equipment performance to ensure optimal operation and reduced downtime.
+### 2. Transformation:
+- **Union Transformation**: A union transformation was applied to combine all three datasets into one. The union operation merged the data from these different sources into a single unified dataset.
+
+### 3. Destination:
+- **CSV File**: The final output data was written to a CSV file as the destination. This CSV file contains the merged data from the three sources.
+
+## Key Components:
+
+- **Azure Synapse Analytics**:
+  - Used to build and manage the entire data pipeline.
+  - Provides the ability to handle multiple data sources and apply transformations.
+  
+- **Data Flow**:
+  - The core of the project that handles transformations and data movement between sources and destinations.
+
+- **Union Transformation**:
+  - Combines data from the three different formats (JSON, Excel, CSV) into a single dataset for output.
